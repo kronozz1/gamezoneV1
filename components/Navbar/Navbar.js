@@ -140,6 +140,33 @@ const Navbar = () => {
                     </div> */}
         </div>
       </div>
+      <div style={{ flex: 1 }} />
+      {/* <div className={styles['search-container']}>
+                <input type='text' placeholder='Search Games' className={styles['search-input']} />
+                <FaSearch />
+            </div> */}
+      {
+        <div
+          style={{
+            backgroundColor: "rgb(105, 55, 185)",
+            cursor: "pointer",
+            padding: "5px 10px",
+            fontSize: "0.7em",
+            borderRadius: "5px",
+            marginRight: "10px",
+          }}
+          onClick={() => {
+            if (!state.accounts) connectWallet();
+            else disconnectWallet();
+          }}
+        >
+          {state.accounts
+            ? `${state.accounts[0].slice(0, 10)}...${state.accounts[0].slice(
+                state.accounts[0].length - 5
+              )}`
+            : `Connect`}
+        </div>
+      }
     </div>
   );
 };
