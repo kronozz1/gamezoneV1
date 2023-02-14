@@ -1,4 +1,5 @@
 {
+  "homepage": "https://kronozz1.github.io/gamezoneV1",
   "name": "dGames",
   "version": "0.1.0",
   "private": true,
@@ -6,13 +7,17 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
   },
   "dependencies": {
     "@coinbase/wallet-sdk": "^3.4.0",
     "@truffle/hdwallet-provider": "^2.0.12",
     "@walletconnect/web3-provider": "^1.7.8",
     "bootstrap": "^5.2.0",
+    "gh-pages": "^5.0.0",
     "ipfs-http-client": "^57.0.3",
     "it-all": "^1.0.6",
     "next": "12.2.2",
